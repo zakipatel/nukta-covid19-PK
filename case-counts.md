@@ -56,7 +56,8 @@ Here are a list of data sources / publishers of case count data in Pakistan.
 
 This dataset appears to be the official one,  except, the published data is aggregated at the province level. There is nothing about age, gender or hospital. 
 
-The dataset is in PDF, which is a pain. Luckily, it looks like someone has done the job to scrape the PDF into a spreadsheet ! 
+The dataset is in PDF, which is a pain. Luckily, it looks like someone has done the job to scrape the PDF into a spreadsheet (https://docs.google.com/spreadsheets/d/1D7GOmGvi2pqp8KQUIiEOD2ffzqWWLmVQehS3EOfkJ1g/edit#gid=778072418)  and dashboard (https://public.tableau.com/views/COVID2020_PAKISTAN_DAILY/Dashboard1?:showVizHome=no#1)
+
 
 This data can and should be used for baseline modeling at provincial level. 
 
