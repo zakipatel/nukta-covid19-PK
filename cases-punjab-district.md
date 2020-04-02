@@ -3,7 +3,8 @@
 NOTE: This is a WORK IN PROCESS and repo will be updated frequently. Pls do your own due dilligence before using. 
 
 ### Quick Links 
-- Public dashboard - https://public.tableau.com/profile/zaki5466#!/vizhome/Covid19-PK-Punjab/Story1?publish=yes
+- Tableau Public dashboard # 1 https://public.tableau.com/profile/zaki5466#!/vizhome/Covid19-PK-Punjab/Story1?publish=yes
+- Tableau Public dashboard # 2 https://public.tableau.com/profile/zaki5466#!/vizhome/Covid19-PK-Punjab-INTERACTIVE/Story2
 - Data file https://docs.google.com/spreadsheets/d/1fPyN7FPTqOTYYABwywNC_zvo3s5ruL0hmOHXRtbvcJo/ 
 - Map Viz https://kepler.gl/demo/map/dropbox?path=/apps/kepler.gl%20(managed%20by%20uber%20technologies,%20inc.)/covid-19%20in%20punjab%20-%20confirmed%20cases.json
 
