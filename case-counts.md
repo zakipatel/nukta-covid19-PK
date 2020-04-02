@@ -71,3 +71,8 @@ This data can and should be used for baseline modeling at provincial level.
 
 - Twitter feeds of Provincial CM's provide good source for district level data on a daily basis 
 
+
+### Resources
+- https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
+- https://www.kaggle.com/c/covid19-global-forecasting-week-2/notebooks
+- https://www.kaggle.com/data/139140
