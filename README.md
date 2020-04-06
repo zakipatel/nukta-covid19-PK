@@ -1,6 +1,21 @@
-# Covid-19 in Pakistan - Data, Analysis and Visualization
+# Covid-19 in Pakistan
 
-## Very Interesting Resources
+This repo contains data, analysis, visualization and links to resources.
+
+## Things I have worked on 
+
+### Covid in Punjab
+- https://github.com/zakipatel/nukta-covid19-PK/blob/master/cases-punjab-district.md
+- Here you will find case counts at the district level in Google Sheets,  a Tableau dashboard and other relevant stuff
+
+### Covid in Sindh
+- https://github.com/zakipatel/nukta-covid19-PK/blob/master/case-counts-sindh.md
+- Here you will find case counts at the district level in Google Sheets and some charts
+
+
+## Things I want to do
+
+These are Very Interesting Resources
 
 Stanford Interactive Model: 
 - https://news.stanford.edu/2020/03/30/modeling-social-distancings-impact/
@@ -9,6 +24,14 @@ Stanford Interactive Model:
 
 Epi with R
 - https://rviews.rstudio.com/2020/03/05/covid-19-epidemiology-with-r/ 
+
+
+## Data on Covid-19-PAK
+
+There is very little 
+
+- NIH 
+- 
 
 
 ## Background / Intro 
