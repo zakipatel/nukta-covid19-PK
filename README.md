@@ -1,7 +1,19 @@
-# nukta-covid19-PK
-Contains datasets, analysis and visualization of data related to Covid-19 outbreak in Pakistan. This repo is a work-in-progress 
+# Covid-19 in Pakistan - Data, Analysis and Visualization
 
-## Outbreak Analysis - an overview
+## Very Interesting Resources
+
+Stanford Interactive Model: 
+- https://news.stanford.edu/2020/03/30/modeling-social-distancings-impact/
+- https://covid-measures.github.io/ 
+- github link 
+
+Epi with R
+- https://rviews.rstudio.com/2020/03/05/covid-19-epidemiology-with-r/ 
+
+
+## Background / Intro 
+
+### Outbreak Analysis - an overview
 
 Core Data: 
 - Population
@@ -22,7 +34,7 @@ Analysis:
 - Correlation of cases to population, other indicators 
 
 
-## Categories of Datasets
+### Categories of Datasets
 
 1. Epi
     - By Province 
@@ -47,3 +59,8 @@ Analysis:
     - Front-line workers 
     - Interventions
     - .. 
+
+### Epi Modelling - concepts
+
+- BlueDot
+- https://www.ijidonline.com/article/S1201-9712(20)30117-X/fulltext#secsect0035
