@@ -1,0 +1,119 @@
+---
+title: "Calculating R0 for PK-Covid"
+---
+
+Code from https://timchurches.github.io/blog/posts/2020-02-18-analysing-covid-19-2019-ncov-outbreak-data-with-r-part-1/. Thank you
+
+Using PK Punjab Data from here https://docs.google.com/spreadsheets/d/1qfNmi7uoOQBL1kCa4jmNDBaNUmlqqlUoqP8gOV-_W4M/edit?usp=sharing . 
+
+A csv version of the file is provided in the repo
+
+
+# Import the dataset into R , and choose raw data
+```{r}
+#raw_data <- SIR_model_data_punjab
+raw_data <- SIR_model_data_lahore
+```
+
+# Define SIR function 
+```{r}
+SIR <- function(time, state, parameters) {
+  par <- as.list(c(state, parameters))
+  with(par, {
+    dS <- -beta * I * S / N
+    dI <- beta * I * S / N - gamma * I
+    dR <- gamma * I
+    list(c(dS, dI, dR))
+    })
+}
+```
+
+
+```{r}
+library(tidyverse)
+```
+
+# Get data as vector
+```{r}
+infected <- raw_data %>%
+              pull(Cumulative_Cases)
+```
+
+# view vector
+```{r}
+infected
+```
+
+
+```{r}
+# Create an incrementing Day vector the same length as our cases vector
+Day <- 1:(length(Infected))
+```
+
+# Set  population
+```{r}
+#N=110000000  .. punjab
+N = 11130000  .. lahore
+```
+
+# init 
+```{r}
+init <- c(S = N-Infected[1], I = Infected[1], R = 0)
+```
+
+# Define RSS Solver
+```{r}
+RSS <- function(parameters) {
+  names(parameters) <- c("beta", "gamma")
+  out <- ode(y = init, times = Day, func = SIR, parms = parameters)
+  fit <- out[ , 3]
+  sum((Infected - fit)^2)
+}
+```
+
+```{r}
+#install.packages("deSolve")
+```
+
+```{r}
+library(deSolve)
+```
+
+```{r}
+#install.packages("EpiEstim")
+
+```
+
+```{r}
+library(EpiEstim)
+```
+
+```{r}
+#install.packages("incidence")
+```
+
+```{r}
+library(incidence)
+```
+
+```{r}
+# now find the values of beta and gamma that give the smallest RSS,
+# which represents the best fit to the data. Start with values of 0.5 for each,
+# and constrain them to the interval 0 to 1.0
+Opt <- optim(c(0.5, 0.5), RSS, 
+             method = "L-BFGS-B", 
+             lower = c(0, 0), upper = c(1, 1)) 
+# check for convergence
+Opt$message
+```
+
+```{r}
+Opt_par <- setNames(Opt$par, c("beta", "gamma"))
+Opt_par
+```
+
+```{r}
+R0 <- setNames(Opt_par["beta"] / Opt_par["gamma"], "R0")
+R0
+```
+
